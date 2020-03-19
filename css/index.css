@@ -1,1 +1,321 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background: #c4c4c4;
+}
+@font-face {
+  font-family: 'Acme';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Acme Regular'), local('Acme-Regular'), url(https://fonts.gstatic.com/s/acme/v9/RrQfboBx-C5_XxrBaw.ttf) format('truetype');
+}
+header .navBar {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1% 0% 0%;
+}
+header .navBar a {
+  display: flex;
+  color: #443f3f;
+  text-decoration: none;
+  justify-content: center;
+  padding: 0% 2%;
+  height: 5vh;
+  width: 15%;
+  font-size: 110%;
+  background: #999999;
+  border-radius: 1rem 1rem 0 0;
+  align-items: center;
+  border: 0.1vh solid black;
+}
+header .navBar a:hover {
+  background-color: #c4c4c4;
+  color: white;
+}
+.container {
+  width: 92%;
+  margin: 0 auto;
+  color: #443f3f;
+  font-family: 'Acme', sans-serif;
+}
+.container h1 {
+  font-size: 500%;
+}
+.container h2 {
+  font-size: 250%;
+  display: flex;
+  justify-content: center;
+}
+.container .headLine {
+  display: flex;
+  background: #999999;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 2vh 0 0 0;
+}
+@media (max-width: 500px) {
+  .container .headLine {
+    flex-direction: column;
+  }
+}
+.container .headLine img {
+  width: 35%;
+  border-radius: 50%;
+  border: 0.1vh solid black;
+}
+.container .headLine p {
+  margin: 3% 0;
+  line-height: 4vh;
+  font-size: 130%;
+  font-family: 'Acme', sans-serif;
+}
+@media (max-width: 500px) {
+  .container .headLine p {
+    font-size: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .container .headLine p {
+    padding: 0% 2%;
+  }
+}
+.container .headLine a {
+  display: flex;
+  height: 4vh;
+  width: 25%;
+  border: 0.1vh solid black;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 1vh 1vh;
+  color: #443f3f;
+  text-decoration: none;
+}
+.container .headLine a:hover {
+  background-color: #c4c4c4;
+  color: white;
+}
+.container .main-content {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  background-color: #999999;
+}
+@media (max-width: 500px) {
+  .container .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container .main-content h2 {
+  margin: 3% 0;
+}
+.container .main-content div {
+  margin: 5% 3%;
+  width: 40%;
+}
+.container .main-content div:nth-child(1) {
+  width: 54%;
+  line-height: 4vh;
+  font-size: 130%;
+  font-family: 'Acme', sans-serif;
+}
+@media (max-width: 500px) {
+  .container .main-content div:nth-child(1) {
+    font-size: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .container .main-content div:nth-child(1) {
+    width: 80%;
+    text-align: center;
+  }
+}
+.container .main-content div:nth-child(2) {
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .container .main-content div:nth-child(2) {
+    width: 80%;
+  }
+}
+.container .main-content h3 {
+  font-weight: bold;
+  font-size: 175%;
+  border: 0.1vh solid black;
+}
+@media (max-width: 500px) {
+  .container .main-content h3 {
+    padding: 2% 3%;
+    max-width: 100%;
+  }
+}
+.container .history {
+  text-align: center;
+}
+.container .history h2 {
+  background: #999999;
+}
+.container .history table {
+  width: 100%;
+  text-align: center;
+  line-height: 5vh;
+  border: 0.1vh solid black;
+}
+.container .history table th {
+  font-size: 150%;
+  font-weight: bold;
+  border: 0.1vh solid black;
+}
+.container .history table td {
+  font-size: 120%;
+  border: 0.1vh solid black;
+}
+.container address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 4vh;
+  font-size: 130%;
+  font-family: 'Acme', sans-serif;
+}
+@media (max-width: 500px) {
+  .container address {
+    font-size: 100%;
+  }
+}

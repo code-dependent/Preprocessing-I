@@ -54,6 +54,207 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	background:  rgb(196, 196, 196);
+}
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+// variables
+@perfectFont: 'Acme', sans-serif;
+@phone: ~'(max-width: 500px)';
+@commonborder: .1vh solid black;
+@basecolor: rgb(153, 153, 153);
+@text-color:rgb(68, 63, 63);
+// mixins
+.fontGenerals(){
+	line-height: 4vh;
+	font-size:130%;
+	font-family: @perfectFont;
+	@media @phone {
+		font-size: 100%;
+	}
+
+
+}
+.hoverstyles(){
+	background-color: rgb(196, 196, 196);
+	color:white;
+
+}
+
+
+header{
+
+	.navBar{
+		display: flex;
+		justify-content: flex-end;
+		margin:1% 0% 0%;
+		
+		
+		a{
+			display: flex;
+			color:@text-color;
+			text-decoration: none;
+			justify-content: center;
+			padding:0% 2%;
+			height:5vh;
+			width:15%;
+			font-size:110%;
+			background: @basecolor;
+			border-radius:1rem 1rem 0 0;
+			align-items: center;
+			border: @commonborder;
+			
+		
+		}
+		a:hover{
+			.hoverstyles();
+		}
+			
+	}
+
+}
+.container{
+	width:92%;
+	margin:0 auto;
+	color: @text-color;
+	font-family: @perfectFont;
+	h1{
+		font-size: 500%;
+		
+		
+	}
+	h2{
+		font-size:250%;
+		display: flex;
+		justify-content: center;
+	
+		
+	}
+
+	.headLine{
+		display: flex;
+		background: @basecolor;
+		text-align: center;
+		align-items: center;
+		align-content: center;
+		border-radius: 2vh 0 0 0;
+		@media @phone {
+			flex-direction: column;
+		}
+
+		img{
+			width:35%;
+			border-radius: 50%;
+			border:@commonborder;
+
+		}
+		p{
+			margin:3% 0;
+			.fontGenerals();
+
+			@media @phone {
+				padding:0% 2%;
+				
+			}
+			
+		}
+		a{
+			display: flex;
+			height:4vh;
+			width:25%;
+			border: @commonborder;
+			justify-content: center;
+			align-items: center;
+			margin: 0 auto;
+			border-radius: 1vh 1vh;
+			color:@text-color;
+			text-decoration: none;
+
+		}
+		a:hover{
+			.hoverstyles();
+		}
+	}
+	.main-content{
+		display: flex;
+		align-content: center;
+		justify-content: space-between;
+		background-color: @basecolor;
+		@media @phone {
+			flex-direction:column;
+			align-items: center;
+		}
+		
+
+		h2{
+			margin:3% 0;
+		
+			
+		}
+
+		div{
+			margin:5% 3%;
+			width:40%;
+
+		}
+		div:nth-child(1){
+			width:54%;
+			.fontGenerals();
+			@media @phone {
+				width:80%;
+				text-align: center;
+			}
+
+			
+		}
+		div:nth-child(2){
+			text-align: center;
+			@media @phone {
+				width:80%;
+				
+			}
+			
+		}
+		h3{
+			font-weight: bold;
+			font-size:175%;
+			border:@commonborder;
+			@media @phone {
+				padding:2% 3%;
+				max-width: 100%;
+			}
+		}
+	}
+	
+	.history{
+		text-align: center;
+		h2{
+			background: @basecolor;
+		}
+	
+		table{
+			width:100%;
+			text-align: center;
+			line-height: 5vh;
+			border:@commonborder;
+			th{
+				font-size: 150%;
+				font-weight: bold;
+				border:@commonborder;
+			}
+			td{
+				font-size: 120%;
+				border:@commonborder
+			}
+		}
+	}
+	
+	address{
+			display:flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			.fontGenerals();
+	}
 }
 
